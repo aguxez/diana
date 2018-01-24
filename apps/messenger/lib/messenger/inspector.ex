@@ -14,9 +14,9 @@ defmodule Messenger.Inspector do
 
   # TODO: Rethink 'sender' param, maybe I can move this to a function inside the
   # module and simply pass the whole message tot he functions.
-  def analyze("/start", sender),  do: Actions.start(sender)
-  def analyze("/curr", sender),   do: Actions.currently(get_conn(), sender)
-  def analyze("/lyrics", sender), do: Lyrics.get(get_conn(), sender)
+  def analyze("start", sender),  do: Actions.start(sender)
+  def analyze("curr", sender),   do: Actions.currently(get_conn(), sender)
+  def analyze("lyrics", sender), do: Lyrics.get(get_conn(), sender)
   def analyze(command, sender),   do: pattern_inspect(get_conn(), command, sender)
 
   defp get_conn, do: Conn.get_conn()

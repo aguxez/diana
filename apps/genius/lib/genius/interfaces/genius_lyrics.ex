@@ -3,5 +3,5 @@ defmodule Genius.Interfaces.GeniusLyrics do
 
   alias Genius.GeniusLyrics
 
-  defdelegate get(query, user),     to: GeniusLyrics
+  defdelegate get(query),     to: GeniusLyrics
 end

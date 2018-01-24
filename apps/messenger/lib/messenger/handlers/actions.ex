@@ -44,8 +44,6 @@ defmodule Messenger.Handlers.Actions do
     Playlist.save_uri(track["item"]["uri"])
   end
 
-
-
   def add(conn, playlist, user_id) do
     Playlist.start_link()
 
