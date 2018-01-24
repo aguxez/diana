@@ -1,5 +1,8 @@
 defmodule AuthWeb.Router do
   use AuthWeb, :router
+  use FacebookMessenger.Phoenix.Router
+
+  facebook_routes "/messenger/webhook", AuthWeb.MessengerController
 
   pipeline :browser do
     plug :accepts, ["html"]

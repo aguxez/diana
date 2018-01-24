@@ -43,9 +43,10 @@ defmodule Auth.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
 
+      {:phoenix_facebook_messenger, in_umbrella: true},
       {:conn_state, in_umbrella: true},
-      {:tele, in_umbrella: true},
       {:spotify_ex, in_umbrella: true},
+      {:messenger, in_umbrella: true},
     ]
   end
 end
